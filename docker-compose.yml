@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  master:
+    build: docker
+    ports:
+    - "5400:5432"
+    volumes:
+    - .:/my_data
+    
+  slave:
+    build: docker
+    ports:
+    - "5401:5432"  
+    volumes:
+    - .:/my_data

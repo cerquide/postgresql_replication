@@ -1,0 +1,7 @@
+
+
+DROP DATABASE IF EXISTS test_slave;
+DROP ROLE IF EXISTS slave_owner;
+CREATE USER slave_owner WITH SUPERUSER REPLICATION PASSWORD 'slave_owner';
+CREATE DATABASE test_slave OWNER=slave_owner;
+
